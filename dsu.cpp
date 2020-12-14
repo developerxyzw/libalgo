@@ -4,7 +4,6 @@
 // http://www.viva64.com
 
 #include "dsu.h"
-#include <vector>
 using namespace std;
 
 void DSU::shrink_to_fit() {
