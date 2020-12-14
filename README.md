@@ -18,4 +18,4 @@ Supported DSU:
 * Currently, no copy constructors or other good (or bad) things
 
 System reqs:
-* C++11-compliant compiler required (Visual Studio 2012+, gcc 4.8.1+, clang 3.3+)
+* Fully C++14-compliant compiler required (Visual Studio 2017+, gcc 5+, clang 3.4+)
