@@ -3,6 +3,7 @@
 // PVS-Studio Static Code Analyzer for C, C++ and C#:
 // http://www.viva64.com
 
+#include "dsu.h"
 #include <vector>
 using namespace std;
 
