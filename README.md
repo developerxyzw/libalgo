@@ -3,8 +3,8 @@
 A library for using in competitive programming and so on.
 
 Supported technologies:
-* Geometry
-* DSU
+* Geometry (gmath.h, gmath.cpp)
+* DSU (dsu.h, dsu.cpp)
 
 Supported geometry-related things:
 * Geometry primitives: points, lines, polygons, circles, triangles
