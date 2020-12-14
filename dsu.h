@@ -3,7 +3,6 @@
 
 // #include <stdexcept>
 #include <vector>
-using namespace std;
 
 struct DSU_Data {
   int parent;
@@ -15,7 +14,7 @@ struct DSU_Data {
 
 struct DSU {
  private:
-  vector<DSU_Data> d;
+  std::vector<DSU_Data> d;
   bool way_opt;  // 0:disable, 1:enable
   int rank_opt;  // 0:disable, 1:depth, 2:count
 
