@@ -11,7 +11,7 @@ Supported geometry-related things:
 * Geometry primitives: points, lines, polygons, circles, triangles
 * Distance point-point, point-line and point-segment
 * Is_point_in_polygon O(n) version
-* In_point_in_polygon O(log n) version with precompute in O(n)
+* Is_point_in_polygon O(log n) version with precompute in O(n)
 
 Supported DSU:
 * Optimization: none or any combination of way-shrink optimization and rank optimization (supported rank optimizations: count, depth)
