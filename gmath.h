@@ -17,8 +17,8 @@
 //=========================================
 struct gMathConst
 {
-	const long double PI = 4 * atan(1);                    // PI, independent of math.h definition
-	const long double PI2 = 2 * atan(1);                   // PI/2, independent of math.h definition
+	const long double PI = acos(-1);                       // PI, independent of math.h definition
+	const long double PI2 = asin(1);                       // PI/2, independent of math.h definition
 	const long double eps = 1e-10;                         // gMath epsilon (rounding error)
 	gMathConst *getInstance();
 private:
