@@ -15,14 +15,18 @@
 // (c) 2019-2020 Grigoriy Goryunov [t.me/developerxyz]
 
 //=========================================
+// Math Lib 1.1
+// (c) 2019-2020 Grigoriy Goryunov [t.me/developerxyz]
+
+//=========================================
 struct gMathConst
 {
 	const long double PI = acos(-1);                       // PI, independent of math.h definition
 	const long double PI2 = asin(1);                       // PI/2, independent of math.h definition
 	const long double eps = 1e-10;                         // gMath epsilon (rounding error)
-	gMathConst *getInstance();
+	static gMathConst *getInstance();
 private:
-	gMathConst();
+	gMathConst() = default;
 	gMathConst(const gMathConst &) = delete;
 	gMathConst(gMathConst &&) = delete;
 };
@@ -30,6 +34,8 @@ private:
 #define the_PI         the_gMathConst->PI
 #define the_PI2        the_gMathConst->PI2
 #define the_eps        the_gMathConst->eps
+
+long double gabs(long double val);
 
 //=========================================
 struct pt
@@ -85,6 +91,17 @@ struct line
 };
 
 //=========================================
+struct ray
+{
+	pt A, B;
+	ray(const pt &A = pt(0, 0), const pt &B = pt(1, 0));   // Construct a ray A-->B
+	bool operator^(const ray &b) const;                    // are intersecting?
+	bool cont(const pt &p) const;
+	line ln() const;                                       // get the line that contains ray
+	bool areCodirect(const ray &b) const;                  // check if rays are codirected
+};
+
+//=========================================
 struct poly
 {
 	std::vector<pt> pts;
@@ -116,7 +133,10 @@ struct triangle
 {
 	pt A, B, C;
 	triangle(const pt &a = pt(0, 0), const pt &b = pt(0, 0), const pt &c = pt(0, 0));
-	enum class type { inval, acute, right, obtuse };       // inval <=> A, B and C are on the same line
+	enum class type
+	{
+		inval, acute, right, obtuse
+	};       // inval <=> A, B and C are on the same line
 	type getType() const;
 	long double area() const;                              // absolute
 	long double per() const;
@@ -131,6 +151,17 @@ long double dist(const pt &a, const line &b);
 long double dist(const pt &a, const pt &b);
 long double dist(const pt &a, const seg &b);
 long double dist(const seg &a, const pt &b);
+long double dist(const line &a, const line &b);
+long double dist(const line &a, const seg &b);
+long double dist(const seg &a, const line &b);
+long double dist(const seg &a, const seg &b);
+long double dist(const pt &a, const ray &b);
+long double dist(const ray &a, const pt &b);
+long double dist(const line &a, const ray &b);
+long double dist(const ray &a, const line &b);
+long double dist(const ray &a, const ray &b);
+long double dist(const ray &a, const seg &b);
+long double dist(const seg &a, const ray &b);
 
 //=========================================
 std::istream &operator>>(std::istream &is, pt &p);
