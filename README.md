@@ -11,7 +11,7 @@ Supported geometry-related things:
 * Geometry primitives: points, lines, polygons, circles, triangles, NEW: rays
 * Distance all between point, line, ray and segment
 * Is_point_in_polygon O(n) version and O(log n) version with precompute in O(n)
-* You can use it to solve task 16 (Not now, but after Jan 1, 2021, 4:20 MSK)
+* You can use it to solve task 16 (Not now, but after Jan 1, 2021, 4:20 MSK or I will get a RJ. Please don't frame me)
 
 Supported DSU:
 * Optimization: none or any combination of way-shrink optimization and rank optimization (supported rank optimizations: count, depth)
