@@ -11,11 +11,7 @@
 #include <stdint.h>
 
 //=========================================
-// Math Lib 1.1
-// (c) 2019-2020 Grigoriy Goryunov [t.me/developerxyz]
-
-//=========================================
-// Math Lib 1.1
+// Math Lib 1.2
 // (c) 2019-2020 Grigoriy Goryunov [t.me/developerxyz]
 
 //=========================================
