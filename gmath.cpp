@@ -5,7 +5,7 @@
 using namespace std;
 
 //=========================================
-// Math Lib 1.1
+// Math Lib 1.2
 // (c) 2019-2020 Grigoriy Goryunov [t.me/developerxyz]
 
 //=========================================
